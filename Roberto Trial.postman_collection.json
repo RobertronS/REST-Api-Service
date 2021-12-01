@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "e361b537-6af3-4cb3-8468-8fa610b1a243",
+		"name": "Roberto Trial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Poll",
+			"item": [
+				{
+					"name": "/poll/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/poll/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"poll",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/poll/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/poll/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"poll",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/poll/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pollName\": \"Ofre\",\n    \"startDate\": \"2021-10-10T12:45:00.000Z\",\n    \"completionDate\": \"2021-11-10T12:45:00.000Z\",\n    \"isActive\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/poll/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"poll",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/poll/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pollName\": \"Ofre\",\n    \"startDate\": \"2021-10-10T12:45:00.000Z\",\n    \"completionDate\": \"2021-11-10T12:45:00.000Z\",\n    \"isActive\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/poll/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"poll",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "/question/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/question/?page=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/question/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/question/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/question/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"poll\": {\n        \"pollId\": 4\n    },\n    \"questionText\": \"Kak tybya zavout?\",\n    \"displayOrder\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/question/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/question/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"poll\": {\n        \"pollId\": 4\n    },\n    \"questionText\": \"Kak tybya zavout?\",\n    \"displayOrder\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/question/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
